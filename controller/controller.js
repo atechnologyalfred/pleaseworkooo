@@ -51,3 +51,28 @@ export const postUser = async (req, res) => {
 		console.log(err)
 	}
 }
+
+
+//todo crud operation
+export const postTodo = async (req, res) =>  {
+	const { description } = req.body;
+	try {
+		const postTodoResponse = await db.query('INSERT INTO todolist(description) VALUES($1) RETURNING *',[description]);
+		res.json({success: true, data: postTodoResponse.rows})
+		console.log(postTodoResponse.rows)
+	} catch(err) {
+		console.log(err)
+	}
+}
+
+export const getTodo = async (req, res) => {
+	try {
+		const getTodoResponse = await db.query ('SELECT * FROM todolist');
+		res.json({success: true, data: getTodoResponse.rows})
+		console.log(getTodoResponse)
+	} catch(err) {
+		console.log(err)
+	}
+}
+
+

@@ -10,3 +10,8 @@ INSERT INTO subscribe (first_name, last_name, email) VALUES(
 	'Josept',
 	'emmanuel@gmail.com'
 );
+
+CREATE TABLE todolist(
+	todo_id SERIAL PRIMARY KEY,
+	description VARCHAR(255) NOT NULL,
+)
