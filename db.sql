@@ -5,11 +5,11 @@ CREATE TABLE subscribe(
 	last_name varchar(255) NOT NULL,
 	email varchar(255) UNIQUE NOT NULL
 );
-INSERT INTO subscribe (first_name, last_name, email) VALUES(
-	'Emmanuel',
-	'Josept',
-	'emmanuel@gmail.com'
-);
+-- INSERT INTO subscribe (first_name, last_name, email) VALUES(
+-- 	'Emmanuel',
+-- 	'Josept',
+-- 	'emmanuel@gmail.com'
+-- );
 
 CREATE TABLE todolist(
 	todo_id SERIAL PRIMARY KEY,
